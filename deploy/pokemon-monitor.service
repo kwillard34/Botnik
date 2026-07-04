@@ -1,0 +1,11 @@
+[Unit]
+Description=Pokemon Ascended Heroes stock check (single pass)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+# EDIT these two paths to match where you clone the repo and which user runs it
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/pokemon-stock-monitor
+ExecStart=/home/YOUR_USERNAME/pokemon-stock-monitor/venv/bin/python3 /home/YOUR_USERNAME/pokemon-stock-monitor/monitor.py

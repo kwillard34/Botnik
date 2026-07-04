@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Pokemon stock check every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+# Adds up to 60s of random delay each run so requests aren't perfectly periodic
+RandomizedDelaySec=60
+Persistent=true
+
+[Install]
+WantedBy=timers.target

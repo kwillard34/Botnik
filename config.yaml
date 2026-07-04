@@ -1,0 +1,32 @@
+# Configure what you're watching for.
+# Fill in real product page URLs (and Best Buy SKUs) for the items you care about.
+# You can list multiple products per retailer.
+
+check_interval_minutes: 10   # how often the monitor runs one full pass
+jitter_seconds: 45           # random extra delay added/subtracted, to look less bot-like
+
+product_name: "Pokemon TCG: Mega Evolution - Ascended Heroes"
+
+retailers:
+  bestbuy:
+    enabled: true
+    # Best Buy SKUs - find these in the product URL, e.g.
+    # bestbuy.com/site/.../6614130.p  -> sku is 6614130
+    skus:
+      - "6614130"   # <-- replace with the real ETB/booster bundle SKU you want
+
+  target:
+    enabled: true
+    # Target TCIN - find it in the URL, e.g. target.com/p/.../-/A-89729512 -> 89729512
+    tcins:
+      - "89729512"  # <-- replace with the real TCIN
+
+  walmart:
+    enabled: true
+    urls:
+      - "https://www.walmart.com/ip/REPLACE-ME"
+
+  costco:
+    enabled: true
+    urls:
+      - "https://www.costco.com/REPLACE-ME.product.100000000.html"
